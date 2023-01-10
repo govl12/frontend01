@@ -8,7 +8,8 @@
     <style>
       *{margin:0;padding:0} /* 처음 시작 시 기본 셋팅 = 기본 설정을 리셋 한다. */
         li {list-style:none;}
-        a{text-decoration:none;}
+        a{text-decoration:none;
+            color : black}
         .clear{
             clear : both;
         }
@@ -18,13 +19,18 @@
             height : 20px;
             float : left;
         }  */
+
+        .top_menu{
+           position : absolute;
+        }
         .top_menu_list li{
-            float : left;
-            text-align: center;
-            border : 1px solid red;
+           float : left;          
+          text-align: center;
+            margin : 0 30px 0 0;
+            /* border : 1px solid red; */
         }
         #header_wrap #logo{
-            border : 1px solid blue;
+            /* border : 1px solid blue; */
             align-items: center;
             margin : 0 auto;  /* 100 프로일 경우 중앙정렬ㅇ 안됨 */
             width : 400px;
@@ -33,18 +39,18 @@
         #logo img {
             width : 400px;
             height : 100px;
-            border : 1px solid red;
+            /* border : 1px solid red; */
             margin : 0 auto;
             align-items : center;
         }
         #category_menu{
             margin : 0 auto;
-            border : 1px solid grey;
+            /* border : 1px solid grey; */
             overflow:hidden;
         
         }
         .c_menu_list>li{
-            width : 25%;
+            /* width : 25%; */
             text-align : center;
             /* height : 50px; */
             float : left;
@@ -69,14 +75,14 @@
 <body>
     <div id="header_wrap">
         
-        <nav id = "top_menu">
+        <div id = "top_menu">
             <!-- <div class="m1"></div> -->
             <ul class="top_menu_list">
                 <li><a href='#'>로그인</a></li>
                 <li><a href='#'>회원가입</a></li>
                 <li><a href='#'>MY PAGE</a></li>
             </ul>
-        </nav>
+        </div>
         <div class="clear"></div>
         <div id ="logo"><img src ="img/mainlogo.png"></div>
         <nav id="category_menu">
