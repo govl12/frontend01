@@ -13,24 +13,23 @@
         .clear{
             clear : both;
         }
-        /* .m1 {
-            width : 600px;
-            border : 1px solid black;
-            height : 20px;
-            float : left;
-        }  */
+        .header_wrap{
+            width : 1080px;
+            border : 1px solid red;
+            margin : 0 auto;
+        }
 
-        .top_menu{
-           position : absolute;
+        #top_menu{
+            border : 1px solid violet;
+            float : right;
         }
         .top_menu_list li{
-           float : left;          
-          text-align: center;
+            float : left;
             margin : 0 30px 0 0;
             /* border : 1px solid red; */
         }
-        #header_wrap #logo{
-            /* border : 1px solid blue; */
+        .header_wrap #logo{
+            border : 1px solid blue;
             align-items: center;
             margin : 0 auto;  /* 100 프로일 경우 중앙정렬ㅇ 안됨 */
             width : 400px;
@@ -43,38 +42,23 @@
             margin : 0 auto;
             align-items : center;
         }
-        #category_menu{
-            margin : 0 auto;
-            /* border : 1px solid grey; */
-            overflow:hidden;
-        
-        }
         .c_menu_list>li{
-            /* width : 25%; */
+            display : inline-block;
+            border :1px solid red;
             text-align : center;
-            /* height : 50px; */
-            float : left;
-            /* border : 1px solid black; */
+            position : relative;
         }
-       .sub_list{
-        height : 0;
-        overflow: hidden;
-        
-       }
-    .c_menu_list li:hover {
-        transition-duration: 0.5s;
-        height : 200px;
-    }
-    .c_menu_list li:hover .sub_list {
-        transition-duration:1s;
-        height : 200px;
-    }
+        .c_menu_list>li .sub_list{
+            /* display : none; */
+            position : absolute;
+        }
+
 
     </style>
 </head>
 <body>
-    <div id="header_wrap">
-        
+    <div id="header">
+        <div class="header_wrap">
         <div id = "top_menu">
             <!-- <div class="m1"></div> -->
             <ul class="top_menu_list">
@@ -85,6 +69,7 @@
         </div>
         <div class="clear"></div>
         <div id ="logo"><img src ="img/mainlogo.png"></div>
+        </div>
         <nav id="category_menu">
             <ul class="c_menu_list">
                 <li><a href='#'>공지사항</a></li>
