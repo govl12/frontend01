@@ -15,21 +15,23 @@
         }
         .header_wrap{
             width : 1080px;
-            border : 1px solid red;
+            /* border : 1px solid red; */
             margin : 0 auto;
         }
 
         #top_menu{
-            border : 1px solid violet;
+            /* border : 1px solid violet; */
             float : right;
+            margin-top : 5px;
+            font-size: 15px;
         }
         .top_menu_list li{
             float : left;
-            margin : 0 30px 0 0;
+            margin : 0 20px 0 15px;
             /* border : 1px solid red; */
         }
         .header_wrap #logo{
-            border : 1px solid blue;
+            /* border : 1px solid blue; */
             align-items: center;
             margin : 0 auto;  /* 100 프로일 경우 중앙정렬ㅇ 안됨 */
             width : 400px;
@@ -42,18 +44,52 @@
             margin : 0 auto;
             align-items : center;
         }
+        #category_menu {
+            margin-top : 20px;
+            /* height : 30px; */
+            /* border : 1px solid blueviolet; */
+        }
+        .c_menu_list {
+           
+            width : 1080px;
+            margin : 0 auto;
+            text-align: center;
+            /* border : 1px solid black; */
+        }
         .c_menu_list>li{
             display : inline-block;
-            border :1px solid red;
+            /* border :1px solid red; */
             text-align : center;
             position : relative;
+            /* margin : 20px; */
+            width : 150px;
+            margin-left : 90px;
+        }
+
+        .c_menu_list>li a{
+            font-size: 22px;
+            font-weight: bold;
         }
         .c_menu_list>li .sub_list{
-            /* display : none; */
+            /* border : 1px solid blue; */
+            width : 100px;
+            display : none;
             position : absolute;
         }
 
-
+        .c_menu_list>li:hover .sub_list {
+            /* position:absolute; */
+            /* text-align: left; */
+            border : 1px solid red;
+            display : block;
+            width : 150px;
+            /* height :300px; */
+            /* margin-top : 20px; */
+        }
+        .sub_list li{
+            margin : 20px;
+        }
+        
     </style>
 </head>
 <body>
@@ -81,12 +117,10 @@
                     </ul>
                 </li>
                 <li><a href='#'>고객센터</a>
-                    <div>
                         <ul class="sub_list">
                             <li>자주 묻는 질문</li>
                             <li>QnA</li>
                         </ul>
-                    </div>
                 </li>
                 <li><a href='#'>중고 거래</a></li>
             </ul>
