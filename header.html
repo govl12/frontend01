@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
     <style>
-      *{margin:0;padding:0} /* 처음 시작 시 기본 셋팅 = 기본 설정을 리셋 한다. */
-        li {list-style:none;}
-        a{text-decoration:none;
-            color : black}
+      *{ margin:0;
+        padding:0;
+        text-decoration:none;
+        list-style-type: none;
+        color : black;
+         } /* 처음 시작 시 기본 셋팅 = 기본 설정을 리셋 한다. */
+
         .clear{
             clear : both;
         }
+        
         .header_wrap{
             width : 1080px;
             /* border : 1px solid red; */
             margin : 0 auto;
         }
-
+        /*탑메뉴*/
         #top_menu{
             /* border : 1px solid violet; */
             float : right;
@@ -30,6 +34,8 @@
             margin : 0 20px 0 15px;
             /* border : 1px solid red; */
         }
+        
+        /*로고 */
         .header_wrap #logo{
             /* border : 1px solid blue; */
             align-items: center;
@@ -44,18 +50,20 @@
             margin : 0 auto;
             align-items : center;
         }
+        
+        /*헤더 카테고리 메뉴 */
         #category_menu {
             margin-top : 20px;
             /* height : 30px; */
             /* border : 1px solid blueviolet; */
         }
         .c_menu_list {
-           
             width : 1080px;
             margin : 0 auto;
             text-align: center;
-            /* border : 1px solid black; */
+            border : 1px solid black;
         }
+
         .c_menu_list>li{
             display : inline-block;
             /* border :1px solid red; */
@@ -69,6 +77,7 @@
         .c_menu_list>li a{
             font-size: 22px;
             font-weight: bold;
+            color : black;
         }
         .c_menu_list>li .sub_list{
             /* border : 1px solid blue; */
@@ -76,20 +85,33 @@
             display : none;
             position : absolute;
         }
-
+        .c_menu_list li:hover{
+             /* background-color: rgb(248, 198, 151, 0.6); */
+             transition-duration: 0.5s;
+        }   
         .c_menu_list>li:hover .sub_list {
             /* position:absolute; */
             /* text-align: left; */
-            border : 1px solid red;
+            /* border : 1px solid red; */
             display : block;
             width : 150px;
+            background-color: rgb(248, 198, 151, 0.6);
+            z-index: 1;
+            transition: 1s
+            
             /* height :300px; */
             /* margin-top : 20px; */
         }
         .sub_list li{
             margin : 20px;
-        }
         
+        }
+        /* .sub_list li:hover{
+            margin : 20px;
+        } */
+        
+    </style>
+
     </style>
 </head>
 <body>
