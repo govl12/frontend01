@@ -12,7 +12,7 @@
         list-style-type: none;
         color : black;
          } /* 처음 시작 시 기본 셋팅 = 기본 설정을 리셋 한다. */
-
+       
         .clear{
             clear : both;
         }
@@ -55,26 +55,26 @@
         #category_menu {
             margin-top : 20px;
             /* height : 30px; */
-            /* border : 1px solid blueviolet; */
+            border-bottom : 1px solid rgb(163, 161, 161,0.3);
+            margin-bottom : 15px;
         }
         .c_menu_list {
             width : 1080px;
             margin : 0 auto;
             text-align: center;
-            border : 1px solid black;
+            margin-bottom : 5px;
         }
 
         .c_menu_list>li{
             display : inline-block;
             /* border :1px solid red; */
             text-align : center;
-            position : relative;
             /* margin : 20px; */
-            width : 150px;
+        /*  */
             margin-left : 90px;
         }
 
-        .c_menu_list>li a{
+        .c_menu_list>li>a{
             font-size: 22px;
             font-weight: bold;
             color : black;
@@ -95,16 +95,21 @@
             /* border : 1px solid red; */
             display : block;
             width : 150px;
-            background-color: rgb(248, 198, 151, 0.6);
+            border-radius: 5px;
+            background-color: rgb(248, 198, 151);
             z-index: 1;
-            transition: 1s
+            margin-top : 3px;
+            /* transition: 1s; */
+            margin-left : -30px;
             
             /* height :300px; */
             /* margin-top : 20px; */
         }
         .sub_list li{
             margin : 20px;
-        
+        }
+        .sub_list>li>a {
+            color : black;
         }
         /* .sub_list li:hover{
             margin : 20px;
@@ -126,25 +131,26 @@
             </ul>
         </div>
         <div class="clear"></div>
-        <div id ="logo"><img src ="img/mainlogo.png"></div>
+        <div id ="logo"><a href="index.html"><img src="img/mainlogo.png"></a></div>
         </div>
         <nav id="category_menu">
             <ul class="c_menu_list">
-                <li><a href='#'>공지사항</a></li>
+                <li><a href='/sub01.html'>공지사항</a></li>
                 <li class="community"><a href='#'>커뮤니티</a>
                     <ul class="sub_list">
-                        <li>자유 게시판</li>
-                        <li>knit with me</li>
-                        <li>KNIT GALLERY</li>
+                        <li><a href='/sub02.html'>자유 게시판</a></li>
+                        <li><a href='#'>knit with me</a></li>
+                        <li><a href='#'>KNIT GALLERY</a></li>
                     </ul>
                 </li>
+                <li><a href='/sub05.html'>Flea Market</a></li>
+                <li><a href='#'>자료실</a></li>
                 <li><a href='#'>고객센터</a>
                         <ul class="sub_list">
-                            <li>자주 묻는 질문</li>
-                            <li>QnA</li>
+                            <li><a href='#'>자주 묻는 질문</a></li>
+                            <li><a href='#'>QnA</a></li>
                         </ul>
-                </li>
-                <li><a href='#'>중고 거래</a></li>
+                    </li>
             </ul>
         </nav>       
     </div>

@@ -29,104 +29,128 @@
      .slideshow-container img {
       vertical-align: middle;
       /* width : 1080px; */
-      height : 600px;
+      height : 550px; 
       /* border : 1px solid black; */
-          }
-        .active {
-          background-color: #717171;
-        }
-        
-        /* Fading animation */
-        .fade {
-          animation-name: fade;
-          animation-duration: 1.8s;
-        }
-        
-        @keyframes fade {
-          from {opacity: .5} 
-          to {opacity: .8}
-        }
-        
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-          .text {font-size: 11px}
-        }
-
-      /* 메인 배너 스타일*/
-      .one_comment table td{
-        /* border : 1px solid red; */
-        border-right : 1px solid grey;
-        width : 100px;
-        text-align: center;
       }
+      .active {
+        background-color: #717171;
+      }
+      
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.8s;
+        
+      }
+      
+      @keyframes fade {
+        from {opacity: .5} 
+        to {opacity: .8}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+      }
+      #main_content{
+        margin-bottom : 20px;  /* border : 1px solid orange; */
+      }
+      .main-best h3{
+      /* border : 1px solid red; */
+      margin-left : 20px;
+      }
+      .main-best h3>span {
+        color : red;
+      }
+      .main-best {
+        /* border : 1px solid black; */
+        height : 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      .main-best ul li img {
+        border-radius : 10px;
+        width : 200px;
+        height : 200px;
+        /* border : 1px solid red; */
+      }
+      .best_item{
+        float : left;
+        text-align : center;
+        margin : 20px 0 0 50px;
 
-
+        /* border : 1px solid red; */
+      }
+      
     </style>
 </head>
 <body>
-    <header>
-        <div data-include = "header.html"></div>
-    </header>
-     <main>
-          <div class="slideshow-container">
-              <div class="mySlides fade">
-                  <img src="img/main01.jpg" style="width:100%">
-              </div>
-              <div class="mySlides fade">
-                  <img src="img/main02.jpg" style="width:100%">
-              </div>
-   
-        <br>        
+  <header>
+    <div data-include = "header.html"></div>
+  </header>
+  <main>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="img/main01.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/main02.jpg" style="width:100%">
+        </div>
+  <br>        
         <div style="text-align:center">
             <span class="dot"></span> 
             <span class="dot"></span> 
             <span class="dot"></span>
         </div> 
-        <script>
-        let slideIndex = 0;
-        showSlides();
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-            }
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-        </script> 
-        </div>
-        <section id = "main_banner">
-            <div class= "one_comment">
-                <h3> 인사 한 줄 </h3> <input type="text">
-                <input type="button" value="등록">
-                <table>
-                  <tr>
-                    <td>닉네임</td>
-                    <td>날짜</td>
-                    <td> 한마디</td>
-                  </tr>
-                </table>
+      <script>
+      let slideIndex = 0;
+      showSlides();
+      function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+          }
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      </script> 
+    </div>
+        <section id = "main_content">
+            <div class="main-best">
+              <h3>요즘<span> Hot!</span> 한 Knitting</h3>
+              <ul class="best_item">
+               <li class="best_item_name"><img src="/img/main_best01.jpeg"></li>
+               <li>뜨개구리</li>
+              </ul>
+              <ul class="best_item">
+                <li class="best_item_name"><img src="img/main_best02.jpg"></li>
+                <li>자이언트얀 가방</li>
+              </ul>
+              <ul class="best_item">
+                <li><img src="img/main_best03.jpg"></li>
+                <li class="best_item_name">토끼인형</li>
+              </ul> 
             </div>
+
         </section>
     </main>
 
+    <div class="clear"></div>
     <footer>
         <div data-include = "footer.html"></div>
     </footer>
-    <script>
-        includeHTML(); // 함수 호출.
-    </script>
-
 </body>
 </html>
