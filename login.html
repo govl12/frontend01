@@ -6,11 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 페이지</title>
     <script src="include.js"></script>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        p{
+            display:block;
+        }
+        #login_wholewrap{
+            width : 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:80px 0px;
+            /* border : 1px solid red; */
+            background-color: rgb(241, 234, 225);
+        }
+        .login_wrap{
+            width : 1080px;
+            display: flex;
+            flex-flow: column wrap;
+            /* border : 1px solid blue; */
+            align-items: center;
+            justify-content: center;
+        }
+        .login_box{
+            /* border : 1px solid orange; */
+            width : 600px;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius:10px;
+            padding: 50px 100px;
+            box-sizing: border-box;
+        }
+        .login_idbox{
+            width:100%;
+            display:flex;
+            flex-flow:column wrap;
+            align-items: flex-start;
+            justify-content: center;
+
+        }
+        .login_pwbox{
+            width:100%;
+            display:flex;
+            flex-flow:column wrap;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .login_btn{
+            width:100%;
+            height : 50px;
+            border-radius: 5px;
+        }
+        .login_id, .login_pw{
+            padding : 10px;
+            box-sizing: border-box;
+            width : 100%;
+            height : 50px;
+            border-radius:5px;
+        }
+        .find_idpw{
+            width : 100%;
+            display:flex;
+            flex-flow:column wrap;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .login_snsbtn{
+            width:100%;
+            display: flex;
+            flex-flow : row wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .kakao_login{
+            background-color: yellow;
+            border : 1px solid yellow;
+            width:50px;
+            height:50px;
+            border-radius:100%;
+        }
+        .naver_login{
+            background-color: green;
+            border : 1px solid green;
+            width:50px;
+            height:50px;
+            border-radius:100%;
+        }
+        .login_snsbtn img{
+            vertical-align: middle;
+            border-style:none;
+            box-sizing:border-box;
+        }
+    </style>
 </head>
 <body>
     <header>
     <div data-include="header.html"></div>
     </header>
+    <section id = "login_wholewrap" >
+        <div class="login_wrap">
+            <div class="login_box">
+                <p>로그인</p>
+                <div class="login_idbox">
+                    <p>아이디</p>
+                    <input type="text" width="100%" placeholder="아이디를 입력해주세요." class="login_id" value>
+                </div>
+                <div class="login_pwbox">
+                    <p>비밀번호</p>
+                    <input type="password" widht ="100"% placeholder="비밀번호를 입력해주세요." class="login_pw" value>
+                </div>
+                <button width="100%" hegiht="50px" type="button" class="login_btn"><span>로그인하기</span></button>
+                <div class="find_idpw">
+                    <p>아이디 / 비밀번호 찾기 </p>
+                </div>
+                <p>SNS 계정으로 로그인 하기</p>
+                <div class="login_snsbtn">
+                    <button width="50px" height="50px" radius="100%" type="button" class="kakao_login">
+                        <img src="img/icon_kakao.png" class="kakaoimg">
+                    </button>
+                    <button widht="50px" height="50px" radius="100%" type="button" class="naver_login">
+                        <img src="img/icon_naver.png" class="naverimg">
+                    </button>
+                </div>
+                <p>아직 회원이 아니라면?&nbsp;<a href="signup.html"><span>회원가입</span></a></p>
+            </div>
+        </div>
+    </section>
     <footer>
     <div data-include="footer.html"></div>
     </footer>
