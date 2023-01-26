@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="include.js"></script>
+</head>
+<style>
+    *{
+        margin : 0 auto;
+        padding : 0;
+        border-collapse: collapse;
+        text-decoration:none;
+        list-style-type: none;
+        }
+        .clear {
+            clear:both;
+        }
+        section {
+            width : 1080px;
+            margin : 0 auto;
+            height : 600px;
+            /* border : 1px solid black; */
+        }
+        .board_name{
+            display: flex;
+            flex-flow : row wrap;
+            font-size: 22px;
+            box-sizing: border-box;
+            /* border : 1px solid red; */
+            margin : 40px 0px 40px;
+        }
+        .board_name>img{
+            width:40px;
+            height:40px;
+        }
+</style>
+<body>
+    <header>
+        <div data-include="header.html"></div>
+    </header>
+    <section>
+        <article id="notice_content">
+            <div class="board_name">
+                <img src="img/boardlogo.png">
+                <h3>자유게시판</h3>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div data-include="footer.html"></div>
+    </footer>
+</body>
+</html>
