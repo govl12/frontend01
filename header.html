@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
     <style>
+@font-face {
+    font-family: 'GoyangIlsan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
       *{ margin:0;
         padding:0;
         text-decoration:none;
         list-style-type: none;
         color : black;
+        font-family: 'GoyangIlsan';
          } /* 처음 시작 시 기본 셋팅 = 기본 설정을 리셋 한다. */
        
         .clear{
@@ -117,10 +125,7 @@
         } */
         
     </style>
-
-    </style>
-</head>
-<body>
+ 
     <div id="header">
         <div class="header_wrap">
         <div id = "top_menu">
@@ -128,7 +133,7 @@
             <ul class="top_menu_list">
                 <li><a href='login.html'>로그인</a></li>
                 <li><a href='signup.html'>회원가입</a></li>
-                <li><a href='#'>MY PAGE</a></li>
+                <li><a href='login.html'>MY PAGE</a></li>
             </ul>
         </div>
         <div class="clear"></div>
@@ -147,10 +152,6 @@
                 <li><a href='market.html'>Market</a></li>
                 <li><a href='#'>자료실</a></li>
                 <li><a href='#'>고객센터</a>
-                        <ul class="sub_list">
-                            <li><a href='#'>자주 묻는 질문</a></li>
-                            <li><a href='#'>QnA</a></li>
-                        </ul>
                     </li>
             </ul>
         </nav>       

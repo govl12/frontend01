@@ -36,12 +36,23 @@
         background-color: #717171;
       }
       
-      /* Fading animation */
+      /*페이드 효과 */
       .fade {
         animation-name: fade;
         animation-duration: 1.8s;
         
       }
+/* dot 지우기 위해서 dot css 주석처리
+      .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} */
+
       
       @keyframes fade {
         from {opacity: .5} 
@@ -115,36 +126,43 @@
           }
           let dots = document.getElementsByClassName("dot");
           for (i = 0; i < slides.length; i++) {
+          //반복문을 사용하여 slides 이미지 display = none으로 처리.
           slides[i].style.display = "none";  
           }
           slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
+          //slideindex의 값이 slides.lenght 보다 클 경우, slideindex의 값을 1로 처리.
+          //(첫번째 사진으로 처리)
+          if (slideIndex > slides.length) {slideIndex = 1}
+          // i가 dots.length보다 작으면     
           for (i = 0; i < dots.length; i++) {
+            //dot 클래스가 가지고 있는 모든 active 클래스를 ""로 대체.
           dots[i].className = dots[i].className.replace(" active", "");
           }
-          slides[slideIndex-1].style.display = "block";  
+          
+          // slides 변수에서, slideindex-1번의 값을 보이도록(block)으로 설정.
+          slides[slideIndex-1].style.display = "block";   
           dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
-      }
-      </script> 
+          setTimeout(showSlides, 2000); // 2초마다 함수 호출(none>block)하여 
+          //클릭하지 않아도 자동으로 사진 변경 
+        }
+          </script> 
     </div>
         <section id = "main_content">
             <div class="main-best">
               <h3>KNIT<span>-ing</span></h3>
               <ul class="best_item">
                <li class="best_item_name"><img src="img/main_best01.jpeg"></li>
-               <li>뜨개구리</li>
+               <!-- <li>뜨개구리</li> -->
               </ul>
               <ul class="best_item">
                 <li class="best_item_name"><img src="img/main_best02.jpg"></li>
-                <li>자이언트얀 가방</li>
+                <!-- <li>자이언트얀 가방</li> -->
               </ul>
               <ul class="best_item">
                 <li><img src="img/main_best03.jpg"></li>
-                <li class="best_item_name">토끼인형</li>
+                <!-- <li class="best_item_name">토끼인형</li> -->
               </ul> 
             </div>
-
         </section>
     </main>
 
